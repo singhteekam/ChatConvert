@@ -1,0 +1,87 @@
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.message-bubble {
+  background-color: #e6e6eb;
+  border-radius: 16px;
+  padding: 8px 12px;
+  font-size: 14px;
+  margin: 0 16px;
+}
+
+.message-bubble.sent-by-other {
+  background-color: #dcf8c6;
+  align-self: flex-start;
+}
+
+.message-bubble.sent-by-me {
+  background-color: #6f6679;
+  color: white;
+  align-self: flex-end;
+}
+
+.message-sender {
+  font-size: 12px;
+  color: gray;
+  margin-top: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 20px;
+}
+
+.message-time {
+  font-size: 12px;
+  color: gray;
+  margin-top: 8px;
+  text-align: right;
+  font-style: italic;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input[type="file"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(214, 231, 240);
+}
+
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2a7d28;
+  color: #fff;
+  cursor: pointer;
+}
+
+#refreshbtn{
+  margin-top: 5px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a92a2a;
+  color: #fff;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}

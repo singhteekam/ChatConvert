@@ -1,0 +1,28 @@
+{
+  "name": "whatsappchatconvertor",
+  "version": "1.0.0",
+  "description": "This website will convert your exported whatsapp chats file in a well structured manner. Don't worry, your uploaded file will not be saved anywhere because the uploaded file will get deleted immediately after processing and you will see the chats in your screen. For deleting file immediately, I have used fs.promises.unlink.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhteekam/ChatConvertor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/singhteekam/ChatConvertor/issues"
+  },
+  "homepage": "https://github.com/singhteekam/ChatConvertor#readme"
+}
