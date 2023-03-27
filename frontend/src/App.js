@@ -5,7 +5,7 @@ import axios from 'axios';
 
 import Header from './components/Header';
 
-const BASE_URL = "http://localhost:5000";
+// const BASE_URL = "http://localhost:5000";
 
 
 function App() {
@@ -18,9 +18,11 @@ function App() {
     const formData = new FormData();
     formData.append('file', fileInput.current.files[0]);
 
-    axios.post('http://localhost:5000/process-file', formData).then(response => {
+    axios.post('/process-file', formData).then(response => {
       console.log(response);
-      fetchMessages();
+      setMessages(response.data);
+      setSenderOnRight(response.data[1].sender);
+      // fetchMessages();
       // window.location.reload(true);
     });
   };
@@ -29,17 +31,17 @@ function App() {
 
   const [senderOnRight, setSenderOnRight]=useState("");
   
-    async function fetchMessages() {
-      try {
-        await axios.get("http://localhost:5000/").then((res) => {
-          // console.log(res.data);
-          setMessages(res.data);
-          setSenderOnRight(res.data[1].sender);
-        });
-      } catch (err) {
-        console.error(err);
-      }
-    }
+    // async function fetchMessages() {
+    //   try {
+    //     await axios.get("/").then((res) => {
+    //       console.log(res.data);
+    //       setMessages(res.data);
+    //       setSenderOnRight(res.data[1].sender);
+    //     });
+    //   } catch (err) {
+    //     console.error(err);
+    //   }
+    // }
 
   // useEffect(() => {
   //   async function fetchMessages() {
@@ -71,11 +73,15 @@ function App() {
         <button type="submit">Upload</button>
         <button onClick={refreshPage} id="refreshbtn">Refresh Page</button>
       </form>
+
+      
       <div>
         {messages.map(message => {
           const sender = message.sender;
           const showSender = sender !== previousSender;
           previousSender = sender;
+          
+          console.log(sender+":"+message);
 
           return (
             <div key={message.id} className="message">

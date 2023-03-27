@@ -93,7 +93,8 @@ app.post('/process-file', upload.single('file'), (req, res) => {
         deleteFile('uploads/' + req.file.filename);  
         messages = deepCopy(allMessages);
         // console.log(messages[1]);
-        res.redirect('/');
+        // res.redirect('/');
+        res.send(messages)
     });
 });
 
