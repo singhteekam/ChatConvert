@@ -1,6 +1,6 @@
 const express= require('express');
 const path = require('path');
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 const fs = require('fs');
 const multer = require('multer');
 const cors= require("cors");
@@ -20,13 +20,13 @@ app.use(cors());
 // }));
 
 // This middleware informs the express application to serve our compiled React files
-    // app.use(express.static(path.join(__dirname, '/frontend/build')));
+    app.use(express.static(path.join(__dirname, '/frontend/build')));
 
-    // app.get('*', function (req, res) {
-    //     res.sendFile(path.join(__dirname, '/frontend/build/index.html'), function (err){
-    //         res.status(500).send(err);
-    //     });
-    // });
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, '/frontend/build/index.html'), function (err){
+            res.status(500).send(err);
+        });
+    });
 
 
 // // Catch any bad requests
