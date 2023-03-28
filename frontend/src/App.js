@@ -71,7 +71,7 @@ function App() {
       <form onSubmit={handleSubmit} className="form">
         <input type="file" ref={fileInput} className="file-input" />
         <button type="submit">Upload</button>
-        <button onClick={refreshPage} id="refreshbtn">Refresh Page</button>
+        <button onClick={refreshPage} id="refreshbtn">Clear Chat</button>
       </form>
 
       
