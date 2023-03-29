@@ -20,5 +20,8 @@ Run both frontend and backend concurrently in your root directory
 ```bash
 npm start
 ```
+## Contributing
+Pull requests are welcome. 
 
+### Personal website
 [Click to view my portfolio website](http://www.singhteekam.in/)
