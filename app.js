@@ -11,7 +11,9 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors());
 
-
+// var test= require('./test.js');
+// console.log(test.fnnn());
+// test.fnnn();
 
 // Configure the bodyParser middleware
 // app.use(bodyParser.json());

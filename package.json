@@ -4,11 +4,11 @@
   "description": "This website will convert your exported whatsapp chats file in a well structured manner. Don't worry, your uploaded file will not be saved anywhere because the uploaded file will get deleted immediately after processing and you will see the chats in your screen. For deleting file immediately, I have used fs.promises.unlink.",
   "main": "app.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"cd ./frontend && npm run build && npm start\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node app.js",
     "client": "npm start --prefix frontend",
     "clientinstall": "npm install --prefix client",
-    "dev": "concurrently \"npm run server\" \"cd ../frontend && npm start\""
+    "dev": "concurrently \"npm run server\" \"cd ./frontend && npm run build && npm start\""
   },
   "author": "",
   "license": "ISC",
